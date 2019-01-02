@@ -1,8 +1,7 @@
 #!/bin/bash
 ############## start of script ##############
 
-echo "type your ip and press enter:"
-read YOUR_IP
+YOUR_IP=$(curl https://ipinfo.io/ip)
 sudo adduser  --gecos "" user3
 sudo usermod -aG sudo user3
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
