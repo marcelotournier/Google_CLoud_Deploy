@@ -12,6 +12,9 @@ read -p "
 ## if you don't have SSH Keys - in client computer, run:
 
 ssh-keygen -f ~/.ssh/id_rsa &&
+
+## Then, copy the SSH Keys to your new GCloud Server:
+
 ssh-copy-id -i ~/.ssh/id_rsa.pub user3@$YOUR_IP 
 
 ## if you have a mac, install ssh-copy-id:
